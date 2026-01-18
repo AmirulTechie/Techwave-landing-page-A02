@@ -6,16 +6,37 @@
         font-family: "Inter",sans-serif;
     }
 }
-
-
-.headerContainer button{
+section{
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+}
+.hero{
+    background-image: url(/assets/hero-bg.png);
+    background-image: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hero .mic{
+    background-image: url(/assets/hero-circle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.headerContainer button, .hero .heroButtons .spotify{
     background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
 }
 
 @media screen and (max-width: 576px){
     .headerContainer{
         justify-content: space-between;
-        padding: 0 2rem;
+        margin: 1.25rem 0;
+        padding: 0 1.25rem;
     }
     .headerContainer .headerButton, 
     .headerContainer .navItems{
