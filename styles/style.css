@@ -12,12 +12,12 @@ section{
     margin: 0 auto;
 }
 .hero{
-    background-image: url(/assets/hero-bg.png);
+    background-image: url(./assets/hero-bg.png);
     background-repeat: no-repeat;
     background-position: center;
 }
 .hero .mic{
-    background-image: url(/assets/hero-circle.png);
+    background-image: url(./assets/hero-circle.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 350px;
