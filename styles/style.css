@@ -1,22 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import "tailwindcss";
-
-@layer utilities{
-    .font-inter{
-        font-family: "Inter",sans-serif;
-    }
+/* Shared styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-section{
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #1A0B2E;
+    color: white;
+}
+
+section {
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
 }
-.hero{
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/*Header section */
+.headerContainer {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navItems {
+    display: flex;
+    gap: 2rem;
+}
+
+
+.btnColor,
+.heroButtons .spotify {
+    background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
+    padding: 0.75rem 1rem;
+    border-radius: 1000px;
+    color: white;
+    font-weight: 600;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Hero section*/
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 101px 0;
     background-image: url(/assets/hero-bg.png);
     background-repeat: no-repeat;
     background-position: center;
 }
-.hero .mic{
+
+.hero .mic {
     background-image: url(/assets/hero-circle.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -27,6 +88,7 @@ section{
     align-items: center;
     position: relative;
 }
+
 .hero .mic .newBadge {
     background-color: #00FF88;
     color: #1A0B2E;
@@ -38,28 +100,134 @@ section{
     top: 5%;
     right: 5%;
 }
-.headerContainer button, .hero .heroButtons .spotify{
-    background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
+
+.heroInfoPack {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
 }
-.about hr{
+
+.heroTitle h1 {
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.heroInfos p {
+    font-weight: 300;
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+.heroInfos .desktop-br {
+    display: none;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.heroButtons button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 1000px;
+}
+
+.heroButtons .subscribe {
+    background-color: transparent;
+    border: 2px solid #00FF88;
+    color: #00FF88;
+    font-weight: 600;
+}
+
+/*About Section*/
+.about {
+    padding-top: 50px;
+    padding-bottom: 120px;
+}
+
+.aboutHolder {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutHolder h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.threeLineInfo {
+    font-weight: 300;
+    opacity: 0.8;
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.oneLineInfo {
+    font-weight: 300;
+    opacity: 0.8;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-size: 1rem;
+}
+
+.about hr {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    opacity: 20%;
+    opacity: 0.2;
+    border: 1px solid white;
 }
-.ratingInfo .ratings{
+
+.ratingInfo {
+    max-width: 1200px;
+    width: 100%;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+.ratings {
     text-align: center;
 }
-.ratingInfo .ratings h4{
+
+.ratings h4 {
     font-size: 48px;
     font-weight: bolder;
     color: #00FF88;
 }
-.ratingInfo .ratings p{
+
+.ratings p {
     text-transform: uppercase;
-    opacity: 80%;
+    opacity: 0.8;
     font-size: 16px;
 }
+
+/*Why Choose Section*/
+.whyChoose {
+    background-color: #230E3D;
+    padding: 120px 200px;
+}
+
+.whyChooseFeatures h3 {
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
 .featureCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -83,79 +251,107 @@ section{
 .innerCard {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 12px;
 }
 
-.cards p{
-    opacity: 60%;
+.innerCard h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
 }
 
-@media screen and (max-width: 576px){
-    .headerContainer{
+.cards p {
+    opacity: 0.6;
+    line-height: 1.5;
+}
+
+
+
+/* Responsive */
+@media screen and (max-width: 576px) {
+    .headerContainer {
         justify-content: space-between;
         margin: 1.25rem 0;
         padding: 0 2rem;
     }
-    .headerContainer .headerButton, 
-    .headerContainer .navItems{
+
+    .headerButton,
+    .navItems {
         display: none;
     }
-    .headerContainer .hamburger,
-    .heroInfos p br{
+
+    .hamburger {
         display: block;
     }
-   .headerContainer .brand img{
-    width: 60%;
-    }
-    .hero{
-        padding: 40px 20px 40px 20px;
-        background-size: contain;
-        background-position: center center;
-    }
-    .hero .mic {
-         width: 12.5rem;
-         height: 12.5rem;
-         background-size: contain;
-         background-position: center;
 
-        }
+    .brand img {
+        width: 60%;
+    }
+
+    /* Hero Responsive */
+    .hero {
+        padding: 40px 20px;
+        background-size: contain;
+    }
+
+    .hero .mic {
+        width: 12.5rem;
+        height: 12.5rem;
+        background-size: contain;
+        background-position: center;
+    }
+
     .hero .mic img {
         width: 30%;
     }
-    .hero .heroTitle{
-        font-size: 2.5rem;
-    }
-    
-    .hero .mic .newBadge{
-        top:15px;
+
+    .hero .mic .newBadge {
+        top: 15px;
         font-size: small;
     }
-    .about{
+
+    .heroTitle h1 {
+        font-size: 2.5rem;
+    }
+
+    .heroInfos .desktop-br {
+        display: block;
+    }
+
+    /* About Responsive */
+    .about {
         padding: 40px 20px;
     }
-    .about .ratingInfo{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin-top: 40px;
-    }
-    .ratingInfo{
-        gap: 40px;
-    }
-    .aboutHolder p br{
+
+    .threeLineInfo br {
         display: none;
     }
-    .oneLineInfo{
+
+    .ratingInfo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .oneLineInfo {
         margin-top: 15px;
         margin-bottom: 40px;
     }
-    .whyChoose{
+
+    /* Why Choose Responsive */
+    .whyChoose {
+        width: 100%;
         padding: 40px 20px;
+        display: none;
     }
-    .whyChooseFeatures h3{
+
+    .whyChooseFeatures h3 {
         font-size: 32px;
     }
-    .whyChoose .featureCards{
+
+    .featureCards {
         display: flex;
         flex-direction: column;
     }
