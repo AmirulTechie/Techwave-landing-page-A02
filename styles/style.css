@@ -149,15 +149,14 @@ section{
         margin-top: 15px;
         margin-bottom: 40px;
     }
-    
     .whyChoose{
-     padding: 40px 20px;   
+        padding: 40px 20px;
     }
     .whyChooseFeatures h3{
         font-size: 32px;
     }
-    .featureCards{
+    .whyChoose .featureCards{
         display: flex;
         flex-direction: column;
     }
-}   
+}
