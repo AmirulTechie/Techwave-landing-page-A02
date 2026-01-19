@@ -12,12 +12,12 @@ section{
     margin: 0 auto;
 }
 .hero{
-    background-image: url(./assets/hero-bg.png);
+    background-image: url(/assets/hero-bg.png);
     background-repeat: no-repeat;
     background-position: center;
 }
 .hero .mic{
-    background-image: url(./assets/hero-circle.png);
+    background-image: url(/assets/hero-circle.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 350px;
@@ -30,9 +30,9 @@ section{
 .hero .mic .newBadge {
     background-color: #00FF88;
     color: #1A0B2E;
-    font-size: 10px;
+    font-size: 18px;
     font-weight: 800;
-    padding: 2px 10px;
+    padding: 8px 16px;
     border-radius: 20px;
     position: absolute;
     top: 5%;
@@ -41,6 +41,29 @@ section{
 .headerContainer button, .hero .heroButtons .spotify{
     background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
 }
+.about hr{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 20%;
+}
+.raringInfo .ratings{
+    text-align: center;
+}
+.raringInfo .ratings h4{
+    font-size: 48px;
+    font-weight: bolder;
+    color: #00FF88;
+}
+.raringInfo .ratings p{
+    text-transform: uppercase;
+    opacity: 80%;
+    font-size: 16px;
+}
+
+
+
+
 
 @media screen and (max-width: 576px){
     .headerContainer{
@@ -52,18 +75,17 @@ section{
     .headerContainer .navItems{
         display: none;
     }
-    .headerContainer 
-    .hamburger{
+    .headerContainer .hamburger,
+    .heroInfos p br{
         display: block;
     }
    .headerContainer .brand img{
     width: 60%;
     }
     .hero{
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
+        padding: 40px 20px 40px 20px;
         background-size: contain;
-        background-position: center;
+        background-position: center center;
     }
     .hero .mic {
          width: 12.5rem;
@@ -78,7 +100,7 @@ section{
     .hero .heroTitle{
         font-size: 2.5rem;
     }
-
+    
     .hero .mic .newBadge{
         top:15px;
         font-size: small;
