@@ -47,15 +47,15 @@ section{
     margin: 0 auto;
     opacity: 20%;
 }
-.raringInfo .ratings{
+.ratingInfo .ratings{
     text-align: center;
 }
-.raringInfo .ratings h4{
+.ratingInfo .ratings h4{
     font-size: 48px;
     font-weight: bolder;
     color: #00FF88;
 }
-.raringInfo .ratings p{
+.ratingInfo .ratings p{
     text-transform: uppercase;
     opacity: 80%;
     font-size: 16px;
@@ -105,5 +105,24 @@ section{
         top:15px;
         font-size: small;
     }
+    .about{
+        padding: 40px 20px;
+    }
+    .about .ratingInfo{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 40px;
+    }
+    .ratingInfo{
+        gap: 40px;
+    }
+    .aboutHolder p br{
+        display: none;
+    }
+    .oneLineInfo{
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
 
-}    
+
+}   
