@@ -432,12 +432,11 @@ button{
     /* Hero Responsive */
     .hero {
         padding: 40px 20px;
-        background-size: contain;
     }
 
     .hero .mic {
-        width: 12.5rem;
-        height: 12.5rem;
+        width: 150px;
+        height: 150px;
         background-size: contain;
         background-position: center;
     }
@@ -447,10 +446,10 @@ button{
     }
 
     .hero .mic .newBadge {
-        top: 15px;
+        top: 10px;
+        right: -20px;
         font-size: small;
     }
-
     .heroTitle h1 {
         font-size: 2.5rem;
     }
