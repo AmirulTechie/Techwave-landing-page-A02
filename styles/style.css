@@ -73,13 +73,13 @@ button {
     align-items: center;
     text-align: center;
     padding: 101px 0;
-    background-image: url(/assets/hero-bg.png);
+    background-image: url(../assets/hero-bg.png);
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .hero .mic {
-    background-image: url(/assets/hero-circle.png);
+    background-image: url(../assets/hero-circle.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 350px;
@@ -282,6 +282,8 @@ button {
 }
 .episodes{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
     margin-bottom: 120px;
 }
@@ -301,7 +303,6 @@ button {
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: start;
     gap: 12px;
     padding: 24px;
 }
@@ -323,7 +324,10 @@ button {
     margin-bottom: 40px;
 }
 .hostContainer{
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 .hostInfoCard{
     max-width: 1200px;
@@ -340,6 +344,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: start;
+    gap: 16px;
 }
 .hostInfo h5{
     font-size: 32px;
@@ -351,7 +356,22 @@ button {
 }
 .socials{
     display: flex;
+    justify-content: start;
+    gap: 8px;
+    line-height: 24px;
+}
+
+.socials div{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #533C72;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+.socials div:hover{
+    cursor: pointer;
 }
 /* Responsive */
 @media screen and (max-width: 576px) {
@@ -438,5 +458,33 @@ button {
     .featureCards {
         display: flex;
         flex-direction: column;
+    }
+    /* Featured section Responsive */
+    .fetaured{
+        padding: 40px 60px 20px;
+    }
+    .fetaured .featuredEp h4{
+        font-size: 28px;
+
+    }
+    .fetaured .featuredEp .episodes{
+        flex-direction: column;
+    }
+    .episodeCard{
+        width: 380px;
+    }
+    .hostContainer h4{
+        font-size: 32px;
+    }
+    .hostInfoCard{
+        width: 400px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 24px;
+    }
+    .socials{
+        justify-content: center;
     }
 }
